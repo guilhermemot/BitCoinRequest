@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TrackBitCoin</string>
+    <string name="ivBitCoin">Bitcoin</string>
+    <string name="tvMoney">Moeda Corrente</string>
+    <string name="tvbtc">BTC</string>
+
+</resources>
