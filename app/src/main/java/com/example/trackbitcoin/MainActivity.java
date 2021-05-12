@@ -58,11 +58,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 Log.d("Bitcoin", "JSON: " + response.toString());
-                try{
-                    //JSONObject json = (JSONObject) JSONSerializer.toJSON(response);
-                    //https://stackoverflow.com/questions/7332611/how-do-i-extract-value-from-json/52950235
-                    mTextViewLast.setText(response.getString("last"));
-                }catch (JSONException e){
+                try {
+                    JSONObject _jObject  = new JSONObject(response.getString("data"));
+                    Double last = _jObject.getDouble("last");
+                    mTextViewLast.setText(last.toString());
+                } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
